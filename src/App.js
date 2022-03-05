@@ -1,5 +1,6 @@
 import { Grommet } from 'grommet';
-import ButtonGlobal from './Components/Button';
+import Routes from './Routes';
+
 
 function App() {
   const theme = {
@@ -13,10 +14,8 @@ function App() {
   }
   return (
     <div className="App">
-     <Grommet theme={theme}>
-      
-       <ButtonGlobal label='Adicionar ao carrinho' />
-
+      <Grommet theme={theme}>
+        <Routes/>
       </Grommet>
 
     </div>

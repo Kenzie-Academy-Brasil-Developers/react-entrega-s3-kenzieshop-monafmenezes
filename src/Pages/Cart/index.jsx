@@ -1,11 +1,11 @@
 import HeaderGlobal from "../../Components/Header"
 
-const Dashboard = () => {
-    return (
+const Cart = () => {
+    return(
         <div>
             <HeaderGlobal/>
         </div>
     )
 }
 
-export default Dashboard
+export default Cart
