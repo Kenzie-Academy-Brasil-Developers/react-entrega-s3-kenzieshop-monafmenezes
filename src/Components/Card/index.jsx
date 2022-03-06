@@ -1,16 +1,16 @@
 import { Box, Card, Heading, Image, Text } from "grommet"
 import ButtonGlobal from '../Button'
 import  products from '../../db/index'
-import { useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
+
+import { useDispatch} from "react-redux"
 import { addProduct } from "../../Store/modules/cart/actions"
 
 const CardList = () => {
 
    const dispatch = useDispatch()
-    const cartProducts = useSelector((store) => store.product)
+   
     const handleAddProduct = (product) => dispatch(addProduct(product))
-    console.log(cartProducts)
+   
     
 
 
@@ -25,8 +25,8 @@ const CardList = () => {
                         src={product.image}
                     
                     />
-                    <Heading color='dark-1' margin='5px' alignSelf="center" level='3'>{product.name}</Heading>
-                    <Heading color='accent-1' margin='5px' alignSelf="center" level='6'>{`R$ ${product.price.toFixed(2)}`}</Heading>
+                    <Heading  margin='5px' alignSelf="center" level='3'>{product.name}</Heading>
+                    <Heading  margin='5px' alignSelf="center" level='6'>{`R$ ${product.price.toFixed(2)}`}</Heading>
                     <ButtonGlobal product={product} onclick={handleAddProduct} label="Adicionar ao carrinho"/>
 
                 </Card>
