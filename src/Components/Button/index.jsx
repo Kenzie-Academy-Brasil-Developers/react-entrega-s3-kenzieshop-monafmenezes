@@ -1,9 +1,10 @@
 import { Button, Box } from "grommet";
 
-const ButtonGlobal = ({label}) => {
+const ButtonGlobal = ({label, onclick, product}) => {
+ 
     return(
         <Box>
-            <Button margin='10px' primary label={label} alignSelf="center" onClick={()=> console.log('clicou!')}/>
+            <Button margin='10px' primary label={label} alignSelf="center" onClick={()=>onclick(product)}/>
         </Box>
     )
 }
