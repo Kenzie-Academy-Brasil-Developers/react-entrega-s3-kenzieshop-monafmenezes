@@ -1,6 +1,6 @@
 import { Box, Card, Heading, Image, Text } from "grommet"
 import ButtonGlobal from '../Button'
-import  products from '../../db/index'
+//import  products from '../../db/index'
 
 import { useDispatch, useSelector} from "react-redux"
 import { addProduct } from "../../Store/modules/cart/actions"
@@ -10,6 +10,7 @@ import { toast } from "react-toastify"
 const CardList = ({setCart, cart}) => {
    
     const dispatch = useDispatch()
+    const products = useSelector((state) => state.products)
    
     const handleAddProduct = (product) => {
         if(cart.includes(product) === false) {

@@ -1,4 +1,4 @@
-import { products } from "../../../db";
+import  products  from '../../../db/';
 
 const productsReducer = (state=products, action) => {
     switch(action.type){
