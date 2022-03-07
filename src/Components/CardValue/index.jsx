@@ -9,7 +9,7 @@ const CardValue = ({cart}) => {
 
     return(
         
-            <Card  height="medium" align='center' margin='15px' width="medium" background="light-1">
+            <Card  height="medium" align='center' margin='10px' width="medium" background="light-1">
                 <CardHeader pad="medium">
                     <Heading  level='3'>Resumo do pedido</Heading>
                 </CardHeader>

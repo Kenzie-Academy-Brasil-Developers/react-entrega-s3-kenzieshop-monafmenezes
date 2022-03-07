@@ -14,19 +14,19 @@ const HeaderGlobal = () => {
     }
 
     return(
-        <Box align="center" background="brand" pad="medium" responsive>
-            <Header gap="500px" justify="between"  >
+        
+            <Header   background='brand' responsive gap="xsmall" justify="between"  >
                
                 <Heading  margin="none" color='accent-1' responsive textAlign="start">KenzieShop</Heading>
             
 
-                <Nav responsive direction="row"pad="medium">
-                    <Anchor label='Início' onClick={handleHome} icon={<Home/>}/>
-                    <Anchor onClick={handleClick}  label='Carrinho' icon={<Cart/>} hoverIndicator />
-                    <Anchor label='Entrar'  icon={<Login/>} hoverIndicator />       
+                <Nav responsive direction="row"pad="small">
+                    <Anchor  pad='small' gap="small" responsive  onClick={handleHome} icon={<Home />}/>
+                    <Anchor  responsive onClick={handleClick}   icon={<Cart   />} hoverIndicator />
+                    
                 </Nav>
             </Header>
-        </Box>
+      
     )
 }
 
