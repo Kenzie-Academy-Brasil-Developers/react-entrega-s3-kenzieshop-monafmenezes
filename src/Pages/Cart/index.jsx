@@ -1,12 +1,18 @@
 import CardCart from "../../Components/CardCart"
+import CardValue from "../../Components/CardValue"
 import HeaderGlobal from "../../Components/Header"
+import { Container } from "./style"
 
 const Cart = ({cart, setCart}) => {
     
     return(
         <div>
             <HeaderGlobal/>
-            <CardCart cart={cart} setCart={setCart}/>
+            <Container>
+                <CardCart cart={cart} setCart={setCart}/>
+                <CardValue cart={cart}/>
+
+            </Container>
         </div>
     )
 }

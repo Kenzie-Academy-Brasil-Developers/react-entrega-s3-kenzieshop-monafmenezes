@@ -4,6 +4,7 @@ import  products from '../../db/index'
 
 import { useDispatch, useSelector} from "react-redux"
 import { addProduct } from "../../Store/modules/cart/actions"
+import { toast } from "react-toastify"
 
 
 const CardList = ({setCart, cart}) => {
@@ -14,6 +15,7 @@ const CardList = ({setCart, cart}) => {
         if(cart.includes(product) === false) {
             dispatch(addProduct(product))   
             setCart([...cart, product])
+            toast.success('Item adicionado ao carrinho')
         }
     }
    

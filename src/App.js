@@ -1,5 +1,7 @@
 import { Grommet } from 'grommet';
 import Routes from './Routes';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <Grommet theme={theme}>
+        <ToastContainer />
         <Routes/>
       </Grommet>
 
