@@ -2,18 +2,21 @@ import { Box, Card, Heading, Image, Text } from "grommet"
 import ButtonGlobal from '../Button'
 import  products from '../../db/index'
 
-import { useDispatch} from "react-redux"
+import { useDispatch, useSelector} from "react-redux"
 import { addProduct } from "../../Store/modules/cart/actions"
 
-const CardList = () => {
 
-   const dispatch = useDispatch()
+const CardList = ({setCart, cart}) => {
    
-    const handleAddProduct = (product) => dispatch(addProduct(product))
+    const dispatch = useDispatch()
    
-    
-
-
+    const handleAddProduct = (product) => {
+        if(cart.includes(product) === false) {
+            dispatch(addProduct(product))   
+            setCart([...cart, product])
+        }
+    }
+   
     return(
         <Box direction="row" justify="center"  wrap>
 

@@ -2,13 +2,13 @@ import CardList from "../../Components/Card"
 import HeaderGlobal from "../../Components/Header"
 
 
-const Dashboard = () => {
+const Dashboard = ({cart, setCart}) => {
 
    
     return (
         <div>
             <HeaderGlobal/>
-            <CardList/>
+            <CardList cart={cart} setCart={setCart} />
         </div>
     )
 }
